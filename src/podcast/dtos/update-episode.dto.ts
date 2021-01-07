@@ -13,4 +13,9 @@ export class UpdateEpisodeDto extends EpisodesSearchInput {
   @IsString()
   @IsOptional()
   readonly category?: string;
+
+  @Field((_) => Number, { nullable: true })
+  @IsNumber()
+  @IsOptional()
+  readonly rating?: number;
 }

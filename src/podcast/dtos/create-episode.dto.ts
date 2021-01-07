@@ -11,4 +11,8 @@ export class CreateEpisodeDto extends PodcastSearchInput {
   @Field((_) => String)
   @IsString()
   readonly category: string;
+
+  @Field((type) => Number)
+  @IsNumber()
+  readonly rating: number;
 }

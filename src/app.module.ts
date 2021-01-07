@@ -3,6 +3,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { PodcastsModule } from './podcast/podcasts.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Episode } from './podcast/entities/episode.entity';
+import { Podcast } from './podcast/entities/podcast.entity';
 
 @Module({
   imports: [
@@ -13,7 +14,7 @@ import { Episode } from './podcast/entities/episode.entity';
       database: 'db.sqlite',
       logging: true,
       synchronize: true,
-      entities: [Episode],
+      entities: [Episode, Podcast],
     }),
   ],
   controllers: [],
